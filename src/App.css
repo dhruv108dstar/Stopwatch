@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.nav-bg-color{  
+  background-color: #06d6d6 !important;
 }
 
 .App-logo {
@@ -36,3 +44,33 @@
     transform: rotate(360deg);
   }
 }
+
+/* Typing effect */
+.typewriter-effect {
+  display: inline-block;
+  overflow: hidden;          /* Hides the text after the border */
+  white-space: nowrap;       /* Prevents the text from wrapping to a new line */
+  border-right: 4px solid black; /* Creates the cursor effect */
+  animation: typing 3s steps(30, end), blink 0.5s step-end infinite;
+  max-width: 35ch;
+  color: #e8826d;
+  margin-bottom: 38px;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 22ch;
+  }
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+

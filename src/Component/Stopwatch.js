@@ -54,8 +54,8 @@ function Stopwatch (){
             <h1>{formatTime(stopwatchTimer)}</h1>
         </div>
         <div>
-            <button onClick={()=>handleStartStop(buttonState)}>{buttonState}</button>
-            <button onClick={handleReset}>Reset</button>
+            <button type="button" className="btn btn-success me-2" onClick={()=>handleStartStop(buttonState)}>{buttonState}</button>
+            <button type="button" className="btn btn-danger ms-2" onClick={handleReset}>Reset</button>
         </div>
         </>
     )

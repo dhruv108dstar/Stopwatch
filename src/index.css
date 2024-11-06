@@ -5,6 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #6de8e8;  
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700 !important;
+  font-style: normal;
+  overflow:"hidden";
 }
 
 code {

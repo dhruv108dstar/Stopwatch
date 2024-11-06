@@ -57,10 +57,10 @@ function Timer (){
             {!timeUp ? <h1>{formatTime(timer)}</h1> : <h1>Time Up</h1>}
             {!timeUp?
                 <div>
-                    <button onClick={()=>handleStart()}>{!isActive ? "Start":"Pause"}</button>
-                    <button onClick={handleReset}>Reset</button>
+                    <button type="button" className="btn btn-success me-2" onClick={()=>handleStart()}>{!isActive ? "Start":"Pause"}</button>
+                    <button type="button" className="btn btn-danger ms-2" onClick={handleReset}>Reset</button>
                 </div>  : 
-                <button onClick={()=>setTimeUp(false)}>Ok</button>            
+                <button type="button" className="btn btn-success" onClick={()=>setTimeUp(false)}>Ok</button>            
             }
             
         </>
