@@ -4,6 +4,7 @@ import Timer from "./Component/Timer";
 import Stopwatch from "./Component/Stopwatch";
 import StopwatchLogo from "./stopwatch-svgrepo-com.svg";
 import Footer from "./Component/Footer";
+import Typewriter from "typewriter-effect";
 
 function App() {
   const [isTimer, setIsTimer] = useState(false);
@@ -22,18 +23,22 @@ function App() {
     showHomeComponent(false);
   };
 
-  const showWelcomeComponent = ()=>{    
+  const showWelcomeComponent = () => {
     setIsTimer(false);
     setIsStopwatch(false);
     showHomeComponent(true);
-  }
+  };
 
   return (
     <div className="App">
       <div>
         <nav className="navbar navbar-expand-lg bg-body-tertiary nav-bg-color">
           <div className="container-fluid">
-            <a className="navbar-brand ms-1" href="#" onClick={showWelcomeComponent}>
+            <a
+              className="navbar-brand ms-1"
+              href="#"
+              onClick={showWelcomeComponent}
+            >
               <img
                 src={StopwatchLogo}
                 alt="Logo"
@@ -54,7 +59,10 @@ function App() {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item ms-5">
                   <a className="nav-link" onClick={() => showTimer()} href="#">
@@ -62,7 +70,11 @@ function App() {
                   </a>
                 </li>
                 <li className="nav-item ms-5">
-                  <a className="nav-link" onClick={() => showStopwatch()} href="#">
+                  <a
+                    className="nav-link"
+                    onClick={() => showStopwatch()}
+                    href="#"
+                  >
                     Stopwatch
                   </a>
                 </li>
@@ -75,13 +87,28 @@ function App() {
             </div>
           </div>
         </nav>
-        <div style={{margin: "auto",width: "80%",padding: "157px 157px 156px 157px"}}>
+        <div
+          style={{
+            margin: "auto",
+            width: "80%",
+            padding: "157px 157px 156px 157px",
+          }}
+        >
           {isTimer && <Timer />}
           {isStopwatch && <Stopwatch />}
-          {homeComponent && 
-          <div>
-          <h1 className="typewriter-effect">Welcome to Stopwatch App</h1>
-        </div>}
+          {homeComponent && (
+            <div 
+            className="auto-typewriter">
+              {/*<h1 className="typewriter-effect">Welcome to Stopwatch App</h1>*/}
+              <Typewriter
+                options={{
+                  strings: ["Welcome to Stopwatch App", "Let's count the miles"],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </div>
+          )}
         </div>
         <Footer />
       </div>

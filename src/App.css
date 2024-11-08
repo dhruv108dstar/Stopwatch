@@ -57,6 +57,12 @@
   margin-bottom: 38px;
 }
 
+.auto-typewriter {
+  color: #e8826d;
+  margin-bottom: 21px;
+  font-size: xxx-large;
+}
+
 /* Typing animation */
 @keyframes typing {
   from {
