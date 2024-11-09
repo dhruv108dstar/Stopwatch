@@ -126,14 +126,19 @@ function Timer() {
           </div>
         ))}
       {isInput && (
-        <>
+        <div>
           <input
             type="time"
             onChange={(e) => setEditedTime(e.target.value)}
             value={editedTime}
             step="1"
+            style={{border: "none",
+                outline:"none",
+                backgroundColor: "#6de8e8",
+                fontSize: "37px"
+            }}
           />
-          <div style={{marginTop:"28.2px"}}>
+          <div>
             <button
               type="button"
               className="btn btn-success me-4"
@@ -149,7 +154,7 @@ function Timer() {
               Reset
             </button>
           </div>
-        </>
+        </div>
       )}
     </>
   );
